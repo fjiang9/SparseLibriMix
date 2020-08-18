@@ -10,11 +10,11 @@ import collections
 
 
 parser = argparse.ArgumentParser("Generating mixtures")
-parser.add_argument("json_file")
-parser.add_argument("noise_dir")
-parser.add_argument("out_json")
-parser.add_argument("--n_mixtures", default=1000,  type=int)
-parser.add_argument("--n_speakers", default=3,  type=int)
+parser.add_argument("--json_file", default='../metadata/librispeech_info.json')
+parser.add_argument("--noise_dir", default='/storageNVME/fei/data/speech/Librimix/wham_noise/tt')
+parser.add_argument("--out_json", default='../metadata/sparse_5_0/metadata.json')
+parser.add_argument("--n_mixtures", default=500,  type=int)
+parser.add_argument("--n_speakers", default=5,  type=int)
 parser.add_argument('--ovr_ratio', type=float, default=0.0,
                     help='target overlap amount')
 parser.add_argument("--maxlength", type=int, default=15)

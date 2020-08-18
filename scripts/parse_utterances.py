@@ -5,9 +5,9 @@ import os
 from pathlib import Path
 
 parser = argparse.ArgumentParser("Parsing Librispeech Utterances to json file")
-parser.add_argument("librispeech_dir")
-parser.add_argument("textgrid_dir")
-parser.add_argument("out_file")
+parser.add_argument("--librispeech_dir", default='/storageNVME/fei/data/speech/Librimix/LibriSpeech/test-clean')
+parser.add_argument("--textgrid_dir", default='/storageNVME/fei/data/speech/librispeech_alignments/test-clean')
+parser.add_argument("--out_file", default='../metadata/librispeech_info.json')
 parser.add_argument("--merge_shorter", type=float, default=0.15)
 
 

@@ -6,8 +6,8 @@ from pathlib import Path
 import os
 
 parser = argparse.ArgumentParser("generate overlap mixtures from non-overlap ones")
-parser.add_argument("no_ov_metadata")
-parser.add_argument("out_json")
+parser.add_argument("--no_ov_metadata", default='../metadata/sparse_5_0/metadata.json')
+parser.add_argument("--out_json", default='../metadata/sparse_5_0.2/metadata.json')
 parser.add_argument('--ovr_ratio', type=float, default=0.2,
                     help='target overlap amount')
 parser.add_argument("--version", type=int, default=1)
